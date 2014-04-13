@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+      http://java.sun.com/xml/ns/javaee
+      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+
+	<!-- Forces the server to bind the persistent unit to jndi so that spring can find it -->
+<!-- 	<persistence-context-ref> -->
+<!-- 		<persistence-context-ref-name>vehicleFoundation</persistence-context-ref-name> -->
+<!-- 		<persistence-unit-name>vehicle-foundation</persistence-unit-name> -->
+<!-- 	</persistence-context-ref> -->
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<?axa-security web?>
+	
+</web-app>
