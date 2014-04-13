@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:core="http://jax-ws.dev.java.net/spring/core"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:wss="http://jax-ws.dev.java.net/spring/servlet"
+	xsi:schemaLocation="http://jax-ws.dev.java.net/spring/servlet http://jax-ws.java.net/spring/servlet.xsd
+		http://jax-ws.dev.java.net/spring/core http://jax-ws.java.net/spring/core.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<context:annotation-config/>
+	<context:component-scan base-package="io.crowdcode.spring.ws"/>
+	
+	<wss:binding url="/calculator">
+		<wss:service>
+			<core:service bean="#calculatorServiceBean"/>
+		</wss:service>
+	</wss:binding>
+
+</beans>
